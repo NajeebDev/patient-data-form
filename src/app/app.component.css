@@ -26,9 +26,23 @@ header {
     }
 }
 
+.header {
+    text-align: center;
+    color: black;
+    grid-column: span 12;
+}
+
 .container{
     padding: 40px;
 }
+
+.form{
+    grid-column: span 12;
+    padding: 40px;
+    border-radius: 6px;
+    border: 1px solid white;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.05);
+  }
 
 .title {
     grid-column: span 4;
@@ -69,4 +83,5 @@ header {
     grid-column: 9 / span 4;
     height: 80%;
     font-size: 25px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.05);
 }

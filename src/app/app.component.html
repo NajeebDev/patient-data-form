@@ -1,5 +1,6 @@
+
 <header class="grid">
-    <h1>Patient Data Form</h1>
+    <h1>Patient Data</h1>
     <nav>
         <a href="">Home</a>
         <a href="">About</a>
@@ -7,9 +8,13 @@
     </nav>
 </header>
 
-<div class="container" *ngIf="!data" novalidate>
+<div class="container grid" *ngIf="!data" novalidate>
+    
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form grid">
 
-    <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="grid">
+        <div class="header">
+            <h2>Patient Data Form</h2>
+        </div>
 
         <mat-form-field class="title">
             <mat-label>Title</mat-label>
