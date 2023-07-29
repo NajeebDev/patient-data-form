@@ -1,0 +1,72 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+}
+
+header {
+    padding: 10px 40px;
+    background: #7086ff;
+    align-items: center;
+    color: black;
+
+    & h1 {
+        grid-column: span 6;
+    }
+
+    & nav {
+        grid-column: 7 / span 6;
+        justify-self: end;
+
+        & a {
+            color: black;
+            margin-left: 15px;
+            text-decoration: none;
+        }
+    }
+}
+
+.container{
+    padding: 40px;
+}
+
+.title {
+    grid-column: span 4;
+}
+
+.salutation {
+    grid-column: 5 / span 4;
+}
+
+.surname {
+    grid-column: 9 / span 4;
+}
+
+.first-name {
+    grid-column: span 4;
+}
+
+.dob {
+    grid-column: 5 / span 4;
+}
+
+.marital-status {
+    grid-column: 9 / span 4;
+    height: 100%;
+
+}
+
+.email {
+    grid-column: span 4;
+}
+
+.notes {
+    grid-column: 5 / span 4;
+    height: 100%;
+}
+
+.submit-btn {
+    grid-column: 9 / span 4;
+    height: 80%;
+    font-size: 25px;
+}
