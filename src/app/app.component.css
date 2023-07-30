@@ -32,56 +32,175 @@ header {
     grid-column: span 12;
 }
 
-.container{
+.container {
     padding: 40px;
 }
 
-.form{
+.form {
     grid-column: span 12;
     padding: 40px;
     border-radius: 6px;
     border: 1px solid white;
-    box-shadow: 3px 3px 3px rgba(0,0,0,0.05);
-  }
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+}
+
+mat-form-field {
+    height: 90px;
+}
 
 .title {
-    grid-column: span 4;
+    grid-column: span 2;
 }
 
 .salutation {
+    grid-column: 3 / span 2;
+}
+
+.surname,
+.marital-status {
     grid-column: 5 / span 4;
 }
 
-.surname {
+.first-name,
+.email {
     grid-column: 9 / span 4;
-}
-
-.first-name {
-    grid-column: span 4;
 }
 
 .dob {
-    grid-column: 5 / span 4;
-}
-
-.marital-status {
-    grid-column: 9 / span 4;
-    height: 100%;
-
-}
-
-.email {
     grid-column: span 4;
 }
 
 .notes {
-    grid-column: 5 / span 4;
-    height: 100%;
+    grid-column: span 12;
+    height: 150px;
 }
 
 .submit-btn {
-    grid-column: 9 / span 4;
-    height: 80%;
+    grid-column: 5 / span 4;
+    height: 80px;
     font-size: 25px;
-    box-shadow: 3px 3px 3px rgba(0,0,0,0.05);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.05);
+}
+
+/*Tablet Query*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .grid {
+        gap: 15px;
+    }
+
+    header {
+        padding: 5px 35px;
+    }
+
+    .container {
+        padding: 35px;
+    }
+
+    .form {
+        padding: 35px;
+    }
+
+    mat-form-field {
+        height: 80px;
+    }
+
+    .title {
+        grid-column: span 2;
+    }
+
+    .salutation {
+        grid-column: 3 / span 4;
+    }
+
+    .surname {
+        grid-column: 7 / span 6;
+    }
+
+    .first-name,
+    .marital-status {
+        grid-column: span 6;
+    }
+
+    .dob,
+    .email {
+        grid-column: 7 / span 6;
+    }
+
+    .notes {
+        height: 130px;
+    }
+
+    .submit-btn {
+        height: 70px;
+        font-size: 20px;
+    }
+
+}
+
+/*Mobile Query*/
+@media screen and (max-width: 767px) {
+    .grid {
+        gap: 5px;
+    }
+
+    header {
+        padding: 5px 20px;
+
+        & h1 {
+            font-size: medium;
+        }
+
+        & nav {
+            grid-column: 7 / span 6;
+            justify-self: end;
+
+            & a {
+                font-size: small;
+                margin-left: 8px;
+            }
+        }
+    }
+
+    .header {
+        font-size: 12px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .form {
+        padding: 2px 20px 20px;
+    }
+
+    mat-form-field {
+        height: 70px;
+    }
+
+    .title {
+        grid-column: span 5;
+    }
+
+    .salutation {
+        grid-column: 6 / span 7;
+    }
+
+    .surname,
+    .first-name,
+    .dob,
+    .marital-status,
+    .email {
+        grid-column: span 12;
+    }
+
+    .notes {
+        height: 70px;
+    }
+
+    .submit-btn {
+        grid-column: span 12;
+        height: 50px;
+        font-size: 20px;
+    }
+
 }
